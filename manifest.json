@@ -1,0 +1,20 @@
+{
+
+  "description": "Activates vim mode in the CS academy editor >:)",
+  "manifest_version": 2,
+  "name": "cs-academy-vim",
+  "version": "1.0",
+  "author": "bowad",
+  "homepage_url": "https://github.com/jurplel/cs-academy-vim",
+  "icons": {
+    "48": "icons/vim.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.cs.cmu.edu*"],
+      "js": ["mobilize.js"]
+    }
+  ]
+
+}
