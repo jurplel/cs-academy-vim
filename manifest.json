@@ -10,11 +10,17 @@
     "48": "icons/vim.png"
   },
 
+  "web_accessible_resources": ["mobilize.js"],
+
   "content_scripts": [
     {
-      "matches": ["*://*.cs.cmu.edu*"],
-      "js": ["mobilize.js"]
+      "matches": ["*://*.cs.cmu.edu/*"],
+      "js": ["inject.js"]
     }
-  ]
+  ],
 
+  "permissions": [
+    "activeTab",
+    "*://*.cs.cmu.edu/*"
+  ]
 }
